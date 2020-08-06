@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import Button from "./components/button";
 
 function FunctionalComponent() {
   const [counter, setCounter] = useState(0);
@@ -34,16 +35,22 @@ function FunctionalComponent() {
     <div>
       <h2>React fast refresh will preserve state</h2>
       <div>
-        <button onClick={handleNewCounter}>Increase value</button>
+        <Button onClick={handleNewCounter}>Increase value</Button>
         <p>{newCounter}</p>
       </div>
       <div>
-        <button onClick={handleCounter}>Increase value</button>
+        <Button onClick={handleCounter}>Increase value</Button>
         <p>{counter}</p>
       </div>
       <div>
         <label htmlFor="name">Enter First Name</label>
-        <input value={value} onChange={handleInputChange} name="name" id="name" ref={inputRef} />
+        <input
+          value={value}
+          onChange={handleInputChange}
+          name="name"
+          id="name"
+          ref={inputRef}
+        />
       </div>
     </div>
   );
